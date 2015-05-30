@@ -1,0 +1,19 @@
+{
+  "name": "rethinkdb-jtmpl-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/atmin/rethinkdb-jtmpl-demo"
+  },
+  "author": "Atanas Minev <fr33rider@gmail.com> (http://atmin.me)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/atmin/rethinkdb-jtmpl-demo/issues"
+  },
+  "homepage": "https://github.com/atmin/rethinkdb-jtmpl-demo"
+}
