@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/atmin/rethinkdb-jtmpl-demo/issues"
   },
-  "homepage": "https://github.com/atmin/rethinkdb-jtmpl-demo"
+  "homepage": "https://github.com/atmin/rethinkdb-jtmpl-demo",
+  "dependencies": {
+    "body-parser": "^1.12.4",
+    "morgan": "^1.5.3",
+    "rethinkdb": "^2.0.0-1"
+  }
 }
