@@ -20,16 +20,18 @@ module.exports = {
   __init__: function() {
     var socket = io.connect(); //io('http://10.0.1.13:3000');
     var model = this;
-    var changing = false;
 
     socket.on('titles', function(titles) {
       model('titles', titles);
     });
 
+    socket.on('prefix', function(prefix) {
+      model('prefix', prefix);
+    });
+
     model.on('change', 'input',
       debounce(
         function() {
-          changing = true;
           socket.emit('prefix', this('input'));
         },
         1000

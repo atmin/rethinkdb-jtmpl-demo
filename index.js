@@ -71,6 +71,7 @@ function titles(callback) {
     .merge(function(state) {
       return db.table('titles')
         .between(state.getField('from'), state.getField('to'), {index: 'page_title'})
+        .orderBy({index: 'page_title'})
         .limit(1000)
         .coerceTo('array');
     })
@@ -104,6 +105,8 @@ io.on('connection', function (socket) {
   socket.on('prefix', function(prefix) {
     console.log('prefix', prefix);
     updateState(prefix);
+    socket.emit('prefix', prefix);
+    socket.broadcast.emit('prefix', prefix);
   });
 
   titles(function(err, titles) {
