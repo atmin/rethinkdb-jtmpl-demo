@@ -1,0 +1,13 @@
+<div id="app" data-jtmpl="#template"></div>
+
+<script src="https://cdn.socket.io/socket.io-1.2.0.js"></script>
+<script src="http://jtmpl.com/jtmpl.js"></script>
+
+<script id="template" type="text/template" data-model="app.js">
+  <input value="{{input}}">
+  <ul>
+  {{#titles}}
+    <li><a href="https://en.wikipedia.org/wiki/{{page_title}}">{{page_title}}</a></li>
+  {{/}}
+  </ul>
+</script>
